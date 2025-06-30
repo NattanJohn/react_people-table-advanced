@@ -15,11 +15,15 @@ export const PeopleTable: React.FC<Props> = ({ people, selectedSlug }) => {
   const order = searchParams.get('order');
 
   const getNextSortOrder = (field: string) => {
-    if (sort !== field) return { sort: field, order: null };
+    if (sort !== field) {
+      return { sort: field, order: null };
+    }
 
-    if (order !== 'desc') return { sort: field, order: 'desc' };
+    if (order !== 'desc') {
+      return { sort: field, order: 'desc' };
+    }
 
-    return { sort: null, order: null }
+    return { sort: null, order: null };
   };
 
   return (
