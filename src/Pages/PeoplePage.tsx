@@ -44,9 +44,9 @@ export const PeoplePage = () => {
 
   if (centuries.length > 0) {
     filteredPeople = filteredPeople.filter(person => {
-      const personCentury = Math.floor((person.born - 1) / 100) + 1;
+      const century = Math.floor((person.born - 1) / 100) + 1;
 
-      return centuries.includes(String(personCentury));
+      return centuries.includes(String(century));
     });
   }
 
